@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment- 2</title>
+    <style>
+        #main{
+            height: 300px;
+            width: 500px;
+            border: 2px solid red;
+            margin: 5% 30%;
+            padding: 20px 20px;
+        }
+        .col{
+            width: 100%;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+   <div id="main">
+    <form action="">
+        <div class="col">
+        <label for="">Enter a Sentence</label>
+        <input type="text" id="myText" name="sentence">
+        </div>
+
+        <div class="col"> 
+            <label for="">Enter a Letter</label>
+        <input type="text" id="letter" name="letter">
+
+        </div>
+       <div class="col">
+        <input onclick="getsentc()" type="submit">
+       </div>
+    </form>
+
+    <div>
+        <p id="demo"></p>
+    </div>
+   </div>
+
+   <script>
+    var aa;
+    function getsentc(){
+    var sentc= document.getElementById("myText").value;
+    var letter= document.getElementById("letter").value;
+
+   
+    if(sentc.includes(letter)){
+
+      document.write("Letter in the sentence :- ")
+      const myArray = sentc.split(letter);
+
+      document.write(myArray[1]); 
+
+    }
+    else{
+       document.write("The letter does not exist in the sentence")
+    }
+    }
+   </script>
+</body>
+</html>
